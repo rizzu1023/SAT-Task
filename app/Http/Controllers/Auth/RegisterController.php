@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use App\Follow;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -66,11 +67,18 @@ class RegisterController extends Controller
     {
         // dd($data['gender']);
 
-        return User::create([
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'gender' => $data['gender'],
             'password' => Hash::make($data['password']),
         ]);
+
+        $follow = new Follow;
+        $follow->primary_id = $user->id;
+        $follow->secondary_id = $user->id;
+        $follow->save();
+
+        return $user;
     }
 }

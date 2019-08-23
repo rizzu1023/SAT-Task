@@ -28,11 +28,11 @@
           </div>
           <div class="mt-5 ml-3 col-md-1 p-3 text-center">
             <h5>Followers</h5>
-            <span>{{ $followers }}</span>
+            <span>{{ $followers - 1 }}</span>
           </div>
           <div class="mt-5 ml-4 col-md-1 p-3 text-center">
             <h5>Following</h5>
-            <span>{{ $following }}</span>
+            <span>{{ $following - 1}}</span>
           </div>
         </div>
 </div>

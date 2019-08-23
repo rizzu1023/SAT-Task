@@ -36,6 +36,7 @@ class HomeController extends Controller
     {
         $users = User::all();
         $follow = Follow::where('primary_id',Auth()->user()->id)->get();
+        // return $users[2]->user2->name;
         
         // return $users->follow1;
         // return $users->follow1[0]->secondary_id;

@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 mt-5">
-        @if(count($follow) > 0)
+        @if(count($follow) > 1)
         @foreach($follow as $f)
         @if($f->user2->id != Auth()->user()->id )
         <div class="well">

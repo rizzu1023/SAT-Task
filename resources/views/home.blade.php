@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 mt-5">
-        @if(count($follow) > 0)
+        @if(count($follow) > 1)
         @foreach($posts as $p)
         <div class="container p-3">
      <!-- <h4>No timeline Available</h4> -->
@@ -21,10 +21,10 @@
                 <p>{{ $p->discription }}</p>
                 @endif
             
-            
             <hr>
             </div>
      </div>
+     
                 @endif
                 @endforeach
 
